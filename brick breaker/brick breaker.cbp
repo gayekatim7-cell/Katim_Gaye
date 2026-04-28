@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="brick breaker" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/brick breaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="mingw32" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_mixer" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/brick breaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Background.h" />
+		<Unit filename="include/Ball.h" />
+		<Unit filename="include/Botton.h" />
+		<Unit filename="include/Brick.h" />
+		<Unit filename="include/EventHandler.h" />
+		<Unit filename="include/Graphics.h" />
+		<Unit filename="include/Manager.h" />
+		<Unit filename="include/Object.h" />
+		<Unit filename="include/Paddle.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Background.cpp" />
+		<Unit filename="src/Ball.cpp" />
+		<Unit filename="src/Botton.cpp" />
+		<Unit filename="src/Brick.cpp" />
+		<Unit filename="src/EventHandler.cpp" />
+		<Unit filename="src/Graphics.cpp" />
+		<Unit filename="src/Manager.cpp" />
+		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/Paddle.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

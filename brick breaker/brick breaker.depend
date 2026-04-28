@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1741997249 source:c:\users\hp\desktop\new folder\brick breaker\main.cpp
+	"Manager.h"
+	<ctime>
+
+1742133369 c:\users\hp\desktop\new folder\brick breaker\include\graphics.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+
+1742096405 source:c:\users\hp\desktop\new folder\brick breaker\src\graphics.cpp
+	"Graphics.h"
+	"EventHandler.h"
+
+1742097291 source:c:\users\hp\desktop\new folder\brick breaker\src\brick.cpp
+	"Brick.h"
+
+1742097291 c:\users\hp\desktop\new folder\brick breaker\include\brick.h
+	<Object.h>
+
+1742000070 source:c:\users\hp\desktop\new folder\brick breaker\src\object.cpp
+	"Object.h"
+
+1742000110 c:\users\hp\desktop\new folder\brick breaker\include\object.h
+	"Graphics.h"
+
+1742119724 source:c:\users\hp\desktop\new folder\brick breaker\src\background.cpp
+	"Background.h"
+
+1742119724 c:\users\hp\desktop\new folder\brick breaker\include\background.h
+	<Object.h>
+
+1742013639 source:c:\users\hp\desktop\new folder\brick breaker\src\paddle.cpp
+	"Paddle.h"
+
+1742013640 c:\users\hp\desktop\new folder\brick breaker\include\paddle.h
+	"Object.h"
+	"EventHandler.h"
+
+1740893128 c:\users\hp\desktop\new folder\brick breaker\include\eventhandler.h
+	"Graphics.h"
+
+1740892533 source:c:\users\hp\desktop\new folder\brick breaker\src\eventhandler.cpp
+	"EventHandler.h"
+
+1742097291 source:c:\users\hp\desktop\new folder\brick breaker\src\ball.cpp
+	"Ball.h"
+	"cstdlib"
+
+1742097312 c:\users\hp\desktop\new folder\brick breaker\include\ball.h
+	<Object.h>
+
+1742133794 source:c:\users\hp\desktop\new folder\brick breaker\src\manager.cpp
+	"Manager.h"
+
+1742133832 c:\users\hp\desktop\new folder\brick breaker\include\manager.h
+	<SDL2/SDL.h>
+	<iostream>
+	<vector>
+	"Graphics.h"
+	"Background.h"
+	"Brick.h"
+	"Paddle.h"
+	"Ball.h"
+	"Botton.h"
+
+1742005928 source:c:\users\hp\desktop\new folder\brick breaker\src\botton.cpp
+	"Botton.h"
+
+1742005928 c:\users\hp\desktop\new folder\brick breaker\include\botton.h
+	"Object.h"
+	"EventHandler.h"
+
