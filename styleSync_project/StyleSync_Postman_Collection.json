@@ -1,0 +1,325 @@
+{
+  "info": {
+    "name": "StyleSync API Collection",
+    "_postman_id": "stylesync-api-collection-2026",
+    "description": "API collection for StyleSync - Smart Wardrobe Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000/api", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Sara Ahmed", "type": "text" },
+                { "key": "location", "value": "Cairo", "type": "text" },
+                { "key": "stylePreferences", "value": "minimalist", "type": "text" },
+                { "key": "stylePreferences", "value": "comfortable", "type": "text" },
+                { "key": "profilePicture", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/users", "host": ["{{baseUrl}}"], "path": ["users"] },
+            "description": "Create a new user with optional profile picture upload"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Clothes",
+      "item": [
+        {
+          "name": "Add Clothes Item",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "White Cotton Shirt", "type": "text" },
+                { "key": "category", "value": "top", "type": "text" },
+                { "key": "color", "value": "white", "type": "text" },
+                { "key": "season", "value": "spring", "type": "text" },
+                { "key": "season", "value": "summer", "type": "text" },
+                { "key": "occasion", "value": "casual", "type": "text" },
+                { "key": "status", "value": "active", "type": "text" },
+                { "key": "wearCount", "value": "3", "type": "text" },
+                { "key": "images", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/clothes", "host": ["{{baseUrl}}"], "path": ["clothes"] },
+            "description": "Add a new clothing item with up to 5 images"
+          }
+        },
+        {
+          "name": "Add Clothes - Frequently Worn (wearCount>=7)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Blue Jeans", "type": "text" },
+                { "key": "category", "value": "bottom", "type": "text" },
+                { "key": "color", "value": "blue", "type": "text" },
+                { "key": "season", "value": "fall", "type": "text" },
+                { "key": "season", "value": "winter", "type": "text" },
+                { "key": "occasion", "value": "casual", "type": "text" },
+                { "key": "status", "value": "active", "type": "text" },
+                { "key": "wearCount", "value": "9", "type": "text" },
+                { "key": "lastWorn", "value": "2026-02-20", "type": "text" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/clothes", "host": ["{{baseUrl}}"], "path": ["clothes"] },
+            "description": "Add a frequently worn item (wearCount >= 7) for analytics demo"
+          }
+        },
+        {
+          "name": "Add Clothes - Rarely Worn (wearCount<=2)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Formal Blazer", "type": "text" },
+                { "key": "category", "value": "suit", "type": "text" },
+                { "key": "color", "value": "black", "type": "text" },
+                { "key": "season", "value": "winter", "type": "text" },
+                { "key": "occasion", "value": "formal", "type": "text" },
+                { "key": "status", "value": "active", "type": "text" },
+                { "key": "wearCount", "value": "1", "type": "text" },
+                { "key": "lastWorn", "value": "2024-12-01", "type": "text" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/clothes", "host": ["{{baseUrl}}"], "path": ["clothes"] },
+            "description": "Add a rarely worn item (wearCount <= 2) for donation suggestion demo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Accessories",
+      "item": [
+        {
+          "name": "Add Accessory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Brown Leather Belt", "type": "text" },
+                { "key": "type", "value": "belt", "type": "text" },
+                { "key": "color", "value": "brown", "type": "text" },
+                { "key": "compatibleWith", "value": "bottom", "type": "text" },
+                { "key": "compatibleWith", "value": "suit", "type": "text" },
+                { "key": "status", "value": "active", "type": "text" },
+                { "key": "image", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/accessories", "host": ["{{baseUrl}}"], "path": ["accessories"] },
+            "description": "Add a new accessory with optional image"
+          }
+        },
+        {
+          "name": "Add Accessory - White Sneakers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "White Sneakers", "type": "text" },
+                { "key": "type", "value": "shoes", "type": "text" },
+                { "key": "color", "value": "white", "type": "text" },
+                { "key": "compatibleWith", "value": "top", "type": "text" },
+                { "key": "compatibleWith", "value": "bottom", "type": "text" },
+                { "key": "status", "value": "active", "type": "text" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/accessories", "host": ["{{baseUrl}}"], "path": ["accessories"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "item": [
+        {
+          "name": "Add Weather Data",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"location\": \"Cairo\",\n  \"conditions\": \"sunny\",\n  \"date\": \"2026-03-01\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/weather", "host": ["{{baseUrl}}"], "path": ["weather"] },
+            "description": "Add weather data for a location (used in outfit generation)"
+          }
+        },
+        {
+          "name": "Add Weather Data - Cold",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"location\": \"London\",\n  \"conditions\": \"cold\",\n  \"date\": \"2026-03-01\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/weather", "host": ["{{baseUrl}}"], "path": ["weather"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Laundry",
+      "item": [
+        {
+          "name": "Add Laundry Record",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\"REPLACE_WITH_CLOTHES_ID\"],\n  \"status\": \"washing\",\n  \"scheduledDate\": \"2026-03-02\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/laundry", "host": ["{{baseUrl}}"], "path": ["laundry"] },
+            "description": "Add clothes to laundry. Items in laundry (status != done) are excluded from outfit generation."
+          }
+        },
+        {
+          "name": "Update Laundry Status",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"done\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/laundry/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["laundry", ":id"],
+              "variable": [{ "key": "id", "value": "REPLACE_WITH_LAUNDRY_ID" }]
+            },
+            "description": "Update laundry status: pending → washing → drying → done"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Outfits",
+      "item": [
+        {
+          "name": "Generate Smart Outfit (Feature 1)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "location", "value": "Cairo", "type": "text", "description": "Must match a location in Weather collection" },
+                { "key": "occasion", "value": "casual", "type": "text" },
+                { "key": "name", "value": "Sunny Day Casual Outfit", "type": "text" }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/outfits/generate",
+              "host": ["{{baseUrl}}"],
+              "path": ["outfits", "generate"]
+            },
+            "description": "Core Feature 1: Retrieves weather for location, filters available clothes by season/occasion, excludes donated & in-laundry items, selects matching accessories, creates outfit and updates wear counts."
+          }
+        },
+        {
+          "name": "Add Outfit Manually",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Weekend Casual Look", "type": "text" },
+                { "key": "clothingItems", "value": "REPLACE_WITH_CLOTHES_ID", "type": "text" },
+                { "key": "accessories", "value": "REPLACE_WITH_ACCESSORY_ID", "type": "text" },
+                { "key": "weatherCondition", "value": "sunny", "type": "text" },
+                { "key": "outfitImages", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/outfits", "host": ["{{baseUrl}}"], "path": ["outfits"] },
+            "description": "Manually create and save an outfit combination"
+          }
+        },
+        {
+          "name": "Get All Outfits",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/outfits", "host": ["{{baseUrl}}"], "path": ["outfits"] },
+            "description": "Retrieve all saved outfits with populated clothing items and accessories"
+          }
+        },
+        {
+          "name": "Get Outfit By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/outfits/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["outfits", ":id"],
+              "variable": [{ "key": "id", "value": "REPLACE_WITH_OUTFIT_ID" }]
+            },
+            "description": "Get a specific outfit by its MongoDB ID"
+          }
+        },
+        {
+          "name": "Modify Outfit By ID",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Outfit Name\",\n  \"weatherCondition\": \"cloudy\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/outfits/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["outfits", ":id"],
+              "variable": [{ "key": "id", "value": "REPLACE_WITH_OUTFIT_ID" }]
+            },
+            "description": "Update outfit name, weather condition, clothing items, or accessories"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Wardrobe Analytics (Feature 2)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/outfits/analytics",
+              "host": ["{{baseUrl}}"],
+              "path": ["outfits", "analytics"]
+            },
+            "description": "Core Feature 2: Returns wardrobe usage analytics. Identifies most-used items (wearCount >= 7) and least-used/donation candidates (wearCount <= 2 or lastWorn >= 1 year ago). Does NOT delete items, only suggests donation."
+          }
+        }
+      ]
+    }
+  ]
+}
